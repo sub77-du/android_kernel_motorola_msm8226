@@ -97,13 +97,13 @@ void wpalDump( wpt_moduleid module, wpt_tracelevel level,
     } while (0)
 #else //WLAN_DEBUG
 
-static inline void wpalTrace( wpt_moduleid module, wpt_tracelevel level,
+inline void wpalTrace( wpt_moduleid module, wpt_tracelevel level,
                               char *strFormat, ... ){};
-static inline void wpalDump( wpt_moduleid module, wpt_tracelevel level,
+inline void wpalDump( wpt_moduleid module, wpt_tracelevel level,
                              wpt_uint8 *memory, wpt_uint32 length) {};
-static inline void wpalTraceSetLevel( wpt_moduleid module,
+inline void wpalTraceSetLevel( wpt_moduleid module,
                          wpt_tracelevel level, wpt_boolean on ) {};
-static inline void wpalTraceDisplay(void) {};
+inline void wpalTraceDisplay(void) {};
 #define WPAL_ASSERT(x) do {} while (0);
 
 #endif //WLAN_DEBUG
